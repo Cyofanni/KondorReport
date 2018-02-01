@@ -1,0 +1,81 @@
+\documentclass{beamer}
+
+\usetheme{Padova}
+
+\title{Condorcet Fusion: an implementation}
+\subtitle{Improved Retrieval through Rank Fusion}
+\author{Marco Alfonso, Davide Martini, Giovanni Mazzocchin}
+\date{February 9, 2018}
+
+
+\begin{document}
+
+	\maketitle
+
+	%\begin{frame}{Outline}
+	%	\tableofcontents
+	%\end{frame}
+
+
+	\section{Introduction}
+
+	\begin{frame}{Introduction}
+
+		This project implements some ideas coming from a paper by 
+                \newline \textbf {Aslam} and \textbf{Montague}. 
+                \newline
+                \newline
+		These authors applied \textit{Social Choice Theory} to \textbf{Rank Fusion}. %\vspace{.5em}
+                \newline
+                \newline
+                They claim that their algorithm beats the ones by \textbf {Fox} and \textbf{Shaw}
+                most of the time.
+		%\begin{itemize}
+		%	\item Morbi \textbf{vitae lacus} porta neque tincidunt sodales \vspace{.5em}
+		%	\item Proin tincidunt, \textbf{neque} at tincidunt mollis \vspace{.5em}
+		%	\item Ut \alert{lacinia sem a nibh} consequat porttitor
+		%\end{itemize}
+	\end{frame}
+
+
+	\section{Starter: basic fusion strategies}
+
+	\begin{frame}{Starter: basic fusion strategies}
+                \textbf {Fox} and \textbf{Shaw} devised some simple, score-based fusion formulae:
+		\begin{block}{CombMAX}
+		       \textit{fused score = max(scores)} 
+		\end{block}
+
+		\begin{alertblock}{CombMIN}
+		       \textit{fused score = min(scores)}   
+		\end{alertblock}
+
+		\begin{exampleblock}{CombSUM}
+		       \textit{fused score = sum(scores)}  
+		\end{exampleblock}
+	\end{frame}
+
+        \section{Starter: basic fusion strategies}
+
+	\begin{frame}{Starter: basic fusion strategies}
+                \textbf {Fox} and \textbf{Shaw} devised some simple, score-based fusion formulae:
+		\begin{block}{CombMED}
+		       \textit{fused score = median(scores)} 
+		\end{block}
+
+		\begin{alertblock}{CombANZ}
+		       \textit{fused score = $\frac{CombSUM}{\#nonZeroScores}$}   
+		\end{alertblock}
+
+		\begin{exampleblock}{CombMNZ}
+		       \textit{fused score = $CombSUM \times \#nonZeroScores$}  
+		\end{exampleblock}
+	\end{frame}
+
+        \section{Starter: basic fusion strategies}
+
+        \begin{frame}{Are we comparing apples and oranges?}
+               
+	\end{frame}
+
+\end{document}
