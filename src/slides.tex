@@ -72,10 +72,35 @@
 		\end{exampleblock}
 	\end{frame}
 
-        \section{Starter: basic fusion strategies}
+        \section{Are we comparing apples and oranges}
 
         \begin{frame}{Are we comparing apples and oranges?}
+               Of course we can't perform any sensible fusion without \textbf{normalization}. \newline
+               \textbf{Lee} came up with two handy formulae:
+               	\begin{block}{Max Norm}
+		       \textit{max\_norm = $\frac{old\_score}{max\_score}$} 
+		\end{block}
+                \begin{alertblock}{Min Max Norm}
+		       \textit{min\_max\_norm = $\frac{old\_score - min\_score}{max\_score - min\_score}$}    
+		\end{alertblock}
                
+	\end{frame}
+
+        \section{What about voting systems?}
+
+        \begin{frame}{What about voting systems?}
+               \textbf{Metaphor}: \textit{voters} are \textit{retrieval systems} \newline
+                \hspace*{18mm}  \textit{candidates} are \textit{documents} \newline   
+               The algorithm inspired by the \textbf{Condorcet method} starts from a
+               document comparator known as \textit{Simple Majority Runoff}. \newline
+               
+	\end{frame}
+
+        \section{``Simple Majority Runoff''}
+
+        \begin{frame}{``Simple Majority Runoff''}
+          Imagine a \textbf{contest} between two documents, then the rule below sounds sensible, doesn't it?: \newline \newline
+          \texttt{the more times one of the documents ranks above the other one, the more votes it gets.}
 	\end{frame}
 
 \end{document}
